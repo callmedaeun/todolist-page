@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: "Noto Sans KR", serif;
+    font-optical-sizing: auto;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    margin: 10px 10px;
+    padding: 0;
+    font-size: 18px;
+}
+
+header ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+}
+
+.container {
+    margin: 5px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 18%;
+    background-color: #f4f4f4;
+    margin: 5px 20px;
+    border-radius: 10px;
+    padding: 20px;
+    height: 80vh;
+    position: fixed;
+}
+
+.sidebar-menu li {
+    border-bottom: 1px solid rgb(214, 214, 214);
+    padding: 10px 0;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.tags-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+#add-tag-button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* 태그 리스트 */
+#tag-list li {
+    margin: 10px 0; /* 태그 간 간격 */
+    padding: 5px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    display: flex; /* 태그와 진행 바를 가로로 배치 */
+    justify-content: space-between; /* 양쪽으로 정렬 */
+    align-items: center;
+    font-size: 14px;
+}
+
+/* 진행 바 컨테이너 */
+.progress-bar-container {
+    width: 50%; /* 진행 바 너비 */
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+/* 진행 바 */
+.progress-bar {
+    height: 100%;
+    background-color: #007BFF;
+    transition: width 0.3s ease-in-out;
+}
+
+
+.delete-tag {
+    color: black;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+    margin-top: 5px;
+    height: 5px;
+    width: 1000px;
+    background-color: #2c2c2c;
+    border-radius: 5px;
+    overflow: hidden;
+    position: fixed;
+    bottom: 80px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #007BFF;
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Main Content */
+.content {
+    margin-left: 23%;
+    padding: 6px;
+}
+
+#progress-bar {
+    width: 70%;
+    margin-right: 10px;
+}
+
+.todo-container {
+    margin-left: 22%; /* 사이드바 여백에 맞춤 */
+    padding: 20px;
+}
+
+/* 테이블 */
+.todo-table {
+    width: 90%; /* 테이블이 컨테이너 너비에 맞도록 설정 */
+    border-collapse: collapse; /* 테두리 겹침 제거 */
+    margin-top: 20px; /* 추가 간격 */
+}
+
+.todo-table th,
+.todo-table td {
+    text-align: left; /* 기본 왼쪽 정렬 */
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* 행 구분선 추가 */
+}
+
+.todo-table th {
+    background-color: #f0f0f0; /* 헤더 색상 */
+    font-weight: bold;
+}
+
+.todo-table td:last-child {
+    text-align: center; /* 삭제 버튼만 가운데 정렬 */
+}
+
+
+/* 삭제 버튼 정렬 */
+.todo-table td:last-child {
+    text-align: center; 
+}
+
+.todo-section {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.todo-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.todo-list li {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+/* 입력 폼 스타일 */
+.add-task {
+    background-color: #eee;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 88.6%;
+}
+
+.add-task input,
+.add-task select,
+.add-task button {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.add-task button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-task button:hover {
+    background-color: #0056b3;
+}

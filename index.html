@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="/Style/style.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="logo">To Do</a></li>
+                <li class="search-bar">
+                    <input type="text" class="search" placeholder="검색하세요." aria-label="Search">
+                    <button type="button" class="search-button">검색</button>
+                </li>
+                <li><a href="#" class="settings">설정</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="#today-tasks">To do list</a></li>
+                <li>
+                    <div class="tags-header">
+                        <span>태그 목록</span>
+                        <button id="add-tag-button">+</button>
+                    </div>
+                    <li>
+                        작업
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 50%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        개인
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 30%;"></div>
+                        </div>
+                    </li>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- list 추가 -->
+            <div class="add-task">
+                <form id="add-task-form">
+                    <input type="text" id="task-title" placeholder="할 일 제목" required>
+                    <input type="date" id="task-deadline" required>
+                    <select id="task-tag">
+                        <option value="work">작업</option>
+                        <option value="personal">개인</option>
+                    </select>
+                    <select id="task-priority">
+                        <option value="low">낮음</option>
+                        <option value="medium">중간</option>
+                        <option value="high">높음</option>
+                    </select>
+                    <button type="submit">추가</button>
+                </form>
+            </div>
+            
+            <table class="todo-table">
+                <thead>
+                    <tr>
+                        <th>완료</th>
+                        <th>tag</th>
+                        <th>title</th>
+                        <th>task-end</th>
+                        <th>importence</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="todo-list">
+                    <!-- 할 일 추가 -->
+                </tbody>
+            </table>
+
+            <!-- Progress Bar -->
+            <div class="progress-bar-container">
+                <label for="progress-bar">진행률:</label>
+                <progress id="progress-bar" value="0" max="100"></progress>
+                <span id="progress-percentage">0%</span>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 To-Do List. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/Style/main.js"></script>
+</body>
+</html>
